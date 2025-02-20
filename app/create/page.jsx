@@ -4,6 +4,10 @@ import React, { useState } from 'react'
 import LogoTitle from './_components/LogoTitle'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, ArrowLeft } from 'lucide-react'
+import LogoDesc from './_components/LogoDesc';
+import LogoColorPallete from './_components/LogoColorPallete';
+import LogoDesigns from './_components/LogoDesigns';
+import LogoIdea from './_components/LogoIdea';
 
 function CreateLogo() {
     const [step, setStep] = useState(1);
@@ -22,6 +26,14 @@ function CreateLogo() {
         {step==1?
         
         <LogoTitle onHandleInputChange={(v)=>onHandleInputChange('title',v)} /> :
+        step==2?
+        <LogoDesc onHandleInputChange={(v)=>onHandleInputChange('desc',v)} />:
+        step==3?
+        <LogoColorPallete onHandleInputChange={(v)=>onHandleInputChange('palette',v)} />:
+        step==4?
+        <LogoDesigns onHandleInputChange={(v)=>onHandleInputChange('design',v)} />:
+        step==5?
+        <LogoIdea onHandleInputChange={(v)=>onHandleInputChange('idea',v)} />:
         null
   }
 
