@@ -1,10 +1,12 @@
+"use client";
+
 import { Heading } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 import HeadingDescription from './HeadingDescription'
 import LogoDesig from '@/app/_data/LogoDesig'
 import Image from 'next/image'
 
-function LogoDesigns(onHandleInputChange) {
+function LogoDesigns({onHandleInputChange}) {
   const [selectedOption, setSelectedOption] = useState();
   return (
     <div className='my-10'>
