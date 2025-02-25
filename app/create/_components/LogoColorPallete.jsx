@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import HeadingDescription from "./HeadingDescription";
 import Colors from "@/app/_data/Colors";
 
-function LogoColorPallete({ onHandleInputChange }) {  // Destructure props
+function LogoColorPallete({ onHandleInputChange, formData }) {  // Destructure props
 
-  const [selectedOption, setSelectedOption] = useState();
+  const [selectedOption, setSelectedOption] = useState(formData?.palette);
 
   return (
     <div className="my-10">
